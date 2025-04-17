@@ -534,7 +534,7 @@ type ListEventsRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ListEventsRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -680,7 +680,7 @@ type ListEventsResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ListEventsResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -820,7 +820,7 @@ type ListEventsRequest_AssetQueryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ListEventsRequest_AssetQueryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

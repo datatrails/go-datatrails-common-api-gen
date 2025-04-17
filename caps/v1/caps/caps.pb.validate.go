@@ -71,7 +71,7 @@ type GetCapsRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCapsRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -202,7 +202,7 @@ type CapMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m CapMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -334,7 +334,7 @@ type CapsMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m CapsMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

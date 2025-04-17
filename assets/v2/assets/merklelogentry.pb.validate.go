@@ -75,7 +75,7 @@ type MerkleLogCommitMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogCommitMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -185,7 +185,7 @@ type MerkleLogActiveItemMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogActiveItemMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -325,7 +325,7 @@ type MerkleLogActiveSinceMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogActiveSinceMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -437,7 +437,7 @@ type MerkleLogConfirmMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogConfirmMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -537,7 +537,7 @@ type MerkleLogUnequivocalMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogUnequivocalMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -701,7 +701,7 @@ type MerkleLogCommitMessageMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogCommitMessageMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -834,7 +834,7 @@ type MerkleLogConfirmMessageMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogConfirmMessageMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -967,7 +967,7 @@ type MerkleLogUnequivocalMessageMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogUnequivocalMessageMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1157,7 +1157,7 @@ type MerkleLogEntryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m MerkleLogEntryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
